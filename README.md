@@ -1,4 +1,4 @@
-# Remi Admin
+# Ids Saas Iam Vue
 
 
 
@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.njydsz.com/remi-top/remi-admin.git
+git remote add origin https://gitlab.njydsz.com/startdis/system/ids-saas-iam-vue.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](http://24a6c767a25d/remi-top/remi-admin/-/settings/integrations)
+- [ ] [Set up project integrations](http://24a6c767a25d/startdis/system/ids-saas-iam-vue/-/settings/integrations)
 
 ## Collaborate with your team
 

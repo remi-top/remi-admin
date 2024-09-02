@@ -1,0 +1,49 @@
+export enum PerEnum {
+  // 添加
+  ADD = 'ADD',
+  ADD_MEMBER = 'ADD_MEMBER',
+  ADD_PUBLISH = 'ADD_PUBLISH',
+  ADD_LEVEL = 'ADD_RANK',
+  ADD_GRADE = 'ADD_GRADE',
+  ADD_GROUP = 'ADD_GROUP',
+
+  //添加子集
+  ADDC = 'ADDC',
+  
+  // 查询
+  QUERY = 'QUERY',
+
+  // 修改
+  UPDATE = 'UPDATE',
+  UPDATE_GRADE = 'UPDATE_GRADE',
+  UPDATE_GROUP = 'UPDATE_GROUP',
+
+
+  //详情
+  DETAIL='DETAIL',
+
+  // 删除
+  DELETE = 'DELETE',
+  DELETE_GRADE = 'DELETE_GRADE',
+  DELETE_GROUP = 'DELETE_GROUP',
+  DELETE_RANK = 'DELETE_RANK',
+  
+
+  // 打印
+  PRINT = 'PRINT',
+
+  // 密钥
+  SECRETKEY = 'SECRETKEY',
+
+  // 导出
+  EXPORT = 'EXPORT',
+
+  // 授权
+  AUTH = 'AUTH',
+  ROLEAUTH = 'ROLEAUTH',
+  ROLEAUTHCANCEL = 'ROLEAUTHCANCEL',
+  
+  // 发布
+  PUBLISH = 'PUBLISH',
+  
+}

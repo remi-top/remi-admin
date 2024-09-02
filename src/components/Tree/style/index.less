@@ -1,0 +1,70 @@
+@tree-prefix-cls: ~'@{namespace}-tree';
+
+.@{tree-prefix-cls} {
+  background-color: @component-background;
+
+  .ant-tree-node-content-wrapper {
+    // position: relative;
+    line-height: 16px;
+    display: flex;
+    padding: 5px 0px;
+    .ant-tree-title {
+      // position: absolute;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      
+      white-space: wrap;
+      white-space: normal !important;
+      
+      .vben-tree__title {
+        word-wrap: break-word;
+        word-break: break-all;
+      }
+    }
+  }
+  .ant-tree-treenode {
+
+  }
+  .ant-tree-node-selected {
+    // background-color: lighten(@primary-color, 10%) !important;
+  }
+  &__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-right: 10px;
+    color: rgba(0,0,0,.65);
+
+    &:hover {
+      .@{tree-prefix-cls}__action {
+        visibility: visible;
+      }
+    }
+  }
+
+  &__content {
+    overflow: hidden;
+  }
+
+  &__actions {
+    position: absolute;
+    //top: 2px;
+    right: 3px;
+    display: flex;
+  }
+
+  &__action {
+    margin-left: 4px;
+    visibility: hidden;
+  }
+
+  &-header {
+    border-bottom: 1px solid @border-color-base;
+  }
+}

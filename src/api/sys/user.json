@@ -1,0 +1,31 @@
+{
+    "code": "000000",
+    "msg": null,
+    "data": {
+        "user": null,
+        "userInfoVO": {
+            "id": "7076176998565023744",
+            "userId": "7076176998565023744",
+            "uniqueId": "null",
+            "userCode": "dageda",
+            "userName": "大哥大",
+            "headPic": "",
+            "loginIp": null,
+            "loginDate": null,
+            "status": 1,
+            "deptTenantId": "7208565987619246080",
+            "companyTenantId": "1810715183884599298",
+            "companyTenantName": "云顶数字",
+            "companyTenantNameEn": null,
+            "deptId": "1769566728273092610",
+            "deptName": "市场部",
+            "deptNameEn": "en市场部",
+            "imageInfo": null,
+            "language": "zh_CN",
+            "mobile": "15234870022",
+            "phone": null,
+            "email": "li.mengwei.ext@wuxibiologics.com"
+        },
+        "menus":[]
+    }
+}

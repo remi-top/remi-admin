@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "packages": {
+    "snakerflow-designer-vue-iam": {
+      "signature": "e427431201207314505557028758c1c8"
+    },
+    "snakerflow-designer-vue3": {
+      "signature": "6480b6c893ef6031a15e1dc46485c390"
+    },
+    "snakerflow-designer-vue0815": {
+      "signature": "fef27269ce09c58d81423f998ad8cc55",
+      "file": true
+    }
+  }
+}
