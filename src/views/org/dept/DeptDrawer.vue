@@ -73,7 +73,6 @@
         }
         setFieldsValue({
           ...data.record,
-          status: data.record.status === 1,
         });
       });
 
@@ -127,7 +126,6 @@
           setDrawerProps({confirmLoading: true});
           const values = await validate();
           values.parentId = values.parentId ? values.parentId : 0
-          values.status = values.status ? 1 : 0;
           // 根据公司id获取公司编码
           const data:CompanyInfo = await getInfo(values.companyId);
           values.companyCode = data.companyCode

@@ -1,6 +1,6 @@
 <template>
   <div :class="getClass" :style="getStyle">
-    <div :class="`${prefixCls}-image-wrapper`" :style="getImageWrapperStyle" @click="openModal">
+    <div :class="`${prefixCls}-image-wrapper`" :style="getImageWrapperStyle" @click="edit && openModal">
       <div :class="`${prefixCls}-image-mask`" :style="getImageWrapperStyle" v-show="edit">
         <Icon
           icon="ant-design:cloud-upload-outlined"
@@ -13,7 +13,7 @@
     </div>
     <a-button
       :class="`${prefixCls}-upload-btn`"
-      @click="openModal"
+      @click="edit && openModal"
       v-if="showBtn"
       v-bind="btnProps"
     >
@@ -93,6 +93,7 @@
       );
 
       function handleUploadSuccess({ source, data }) {
+        console.log('{ source, data }',{ source, data })
         sourceValue.value = source;
         emit('change', { source, data });
         createMessage.success(t('component.cropper.uploadSuccess'));

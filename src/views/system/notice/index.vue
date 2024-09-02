@@ -130,7 +130,7 @@ export default defineComponent({
             isUpdate: true,
           });
           setDrawerProps({
-            width:'calc((100% - 220px)*(1/3))'
+            width:'calc((100% - 220px)*(2/3))'
           });
         }
       }

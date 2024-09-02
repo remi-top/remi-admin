@@ -164,13 +164,13 @@ export const formSchema: FormSchema[] = [
     field: 'status',
     label: t('views.company.status'),
     required: false,
-    component: 'Switch',
-    defaultValue: true,
-    componentProps:{
-      checkedChildren: t('common.enable'),
-      unCheckedChildren: t('common.disenabled'),
-      checkedValue: 1,
-      unCheckedValue: 0,
+    component: 'RadioButtonGroup',
+    defaultValue: 1,
+    componentProps: {
+      options: [
+        { label: t('common.enable'), value: 1 },
+        { label: t('common.disenabled'), value: 0 },
+      ],
     },
     colProps: { span: 24 },
   },

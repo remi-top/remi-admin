@@ -17,15 +17,15 @@ export const typeMap = {
   },
 }
 export const columns: BasicColumn[] = [
-  // {
-  //   title: '图标',
-  //   dataIndex: 'noticeIcon',
-  //   align: 'center',
-  //   width:80,
-  //   customRender: ({ record }) => {
-  //     return h(Icon, { icon: record.noticeIcon });
-  //   },
-  // },
+  {
+    title: '图标',
+    dataIndex: 'noticeIcon',
+    align: 'center',
+    width:80,
+    customRender: ({ record }) => {
+      return h(Icon, { icon: record.noticeIcon });
+    },
+  },
   {
     title: '类型',
     dataIndex: 'noticeType',
@@ -39,8 +39,8 @@ export const columns: BasicColumn[] = [
     }
   },
   {
-    title: '标题',
-    dataIndex: 'titile',
+    title: '消息标题',
+    dataIndex: 'noticeTitle',
     align: 'left',
 
   },
@@ -67,6 +67,20 @@ export const columns: BasicColumn[] = [
   //   },
   // },
   {
+    title: '生效日期',
+    dataIndex: 'startime',
+    width: 170,
+    align: 'center',
+
+  },
+  {
+    title: '截至日期',
+    dataIndex: 'endTime',
+    width: 170,
+    align: 'center',
+
+  },
+  {
     title: '发布状态',
     dataIndex: 'status',
     width: 100,
@@ -77,11 +91,11 @@ export const columns: BasicColumn[] = [
     },
     resizable: false,
   },
-  {
-    title: '发布时间',
-    width: 180,
-    dataIndex: 'createdAt',
-  },
+  // {
+  //   title: '发布时间',
+  //   width: 180,
+  //   dataIndex: 'createdAt',
+  // },
   // {
   //   title: '撤销时间',
   //   width: 100,
@@ -91,7 +105,7 @@ export const columns: BasicColumn[] = [
 
 export const searchFormSchema: FormSchema[] = [
   {
-    field: 'title',
+    field: 'noticeTitle',
     label: '消息标题',
     component: 'Input',
     colProps: { span: 6 },
@@ -118,8 +132,8 @@ export const formSchema: FormSchema[] = [
     show: false,
   },
   {
-    field: 'titile',
-    label: '标题',
+    field: 'noticeTitle',
+    label: '消息标题',
     component: 'Input',
     required: true,
     componentProps: {
@@ -137,6 +151,49 @@ export const formSchema: FormSchema[] = [
     },
   },
   {
+    field: 'noticeIcon',
+    label: '消息图标',
+    component: 'IconPicker',
+    componentProps: {
+      // mode: 'svg'
+    },
+    colProps: { span: 24 },
+  },
+  // {
+  //   field: 'msgAbstract',
+  //   label: '摘要',
+  //   component: 'InputTextArea',
+  //   required: true,
+  // },
+  {
+    field: 'startime',
+    label: '生效日期',
+    component: 'DatePicker',
+    componentProps: {
+      showTime: true,
+      valueFormat: 'YYYY-MM-DD HH:mm:ss',
+      placeholder: '请选择截至日期',
+    },
+    dynamicRules: ({ model }) => rules.startTime(model.endTime, true),
+    colProps: {
+       span: 8,
+    },
+  },
+  {
+    field: 'endTime',
+    label: '截至日期',
+    component: 'DatePicker',
+    componentProps: {
+      showTime: true,
+      valueFormat: 'YYYY-MM-DD HH:mm:ss',
+      placeholder: '请选择截至日期',
+    },
+    dynamicRules: ({ model }) => rules.endTime(model.startTime, true),
+    colProps: {
+       span: 8,
+    },
+  },
+  {
     field: 'status',
     label: '状态',
     defaultValue: 1,
@@ -149,26 +206,9 @@ export const formSchema: FormSchema[] = [
       ],
     },
     colProps: {
-       span: 24,
+       span: 8,
     },
   },
-  // {
-  //   field: 'msgAbstract',
-  //   label: '摘要',
-  //   component: 'InputTextArea',
-  //   required: true,
-  // },
-  // {
-  //   field: 'endTime',
-  //   label: '截至日期',
-  //   component: 'DatePicker',
-  //   componentProps: {
-  //     showTime: true,
-  //     valueFormat: 'YYYY-MM-DD HH:mm:ss',
-  //     placeholder: '请选择截至日期',
-  //   },
-  //   dynamicRules: ({ model }) => rules.endTime(model.startTime, true),
-  // },
   // {
   //   field: 'msgType',
   //   label: '接收用户',
@@ -206,6 +246,12 @@ export const formSchema: FormSchema[] = [
   {
     field: 'noticeContent',
     label: '中文内容',
+    component: 'Input',
+    render: render.renderTinymce,
+  },
+  {
+    field: 'noticeContentEn',
+    label: '英文内容',
     component: 'Input',
     render: render.renderTinymce,
   },

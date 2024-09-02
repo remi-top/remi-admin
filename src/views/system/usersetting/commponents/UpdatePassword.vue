@@ -68,11 +68,11 @@
       }
        }, { isTransformResponse: false }).then((res) => {
         if (res.code == ResultEnum.SUCCESS) {
-          $message.createMessage.success(res.message);
+          $message.createMessage.success(res.msg);
           //关闭弹窗
           closeModal();
         } else {
-          $message.createMessage.warning(res.message);
+          $message.createMessage.warning(res.msg);
         }
       });
     } finally {

@@ -126,7 +126,6 @@ export const searchFormSchema: FormSchema[] = [
       labelField:'appName',
       valueField:'appCode'
     },
-    labelWidth: 90,
     colProps: {
       span: 6,
     },

@@ -108,7 +108,7 @@
         columns:columnsCord,
         immediate: false,
         formConfig: {
-          // labelWidth: 100,
+          labelWidth: 100,
           schemas: searchCordFormSchema,
           showAdvancedButton: true,
           showResetButton: true,

@@ -54,7 +54,6 @@ export const columns: BasicColumn[] = [
 export const searchFormSchema: FormSchema[] = [
   {
     field: 'userName',
-    labelWidth:80,
     label: t('views.personal.userName'),
     component: 'Input',
     itemProps:{
@@ -64,7 +63,6 @@ export const searchFormSchema: FormSchema[] = [
   },
   {
     field: 'userCode',
-    labelWidth:80,
     label: t('views.personal.userCode'),
     component: 'Input',
     colProps: {span: 8},
@@ -94,7 +92,6 @@ export const searchPositionFormSchema: FormSchema[] = [
     field: 'postCode',
     label: t('views.position.positionCode'),
     component: 'Input',
-    labelWidth: 80,
     itemProps:{
       labelAlign:'left'
     },
@@ -104,7 +101,6 @@ export const searchPositionFormSchema: FormSchema[] = [
     field: 'postName',
     label: t('views.position.positionName'),
     component: 'Input',
-    labelWidth: 80,
     colProps: {span: 8},
   },
 ];
@@ -132,7 +128,6 @@ export const searchGroupFormSchema: FormSchema[] = [
     field: 'groupName',
     label: t('views.groupInfo.groupName'),
     component: 'Input',
-    labelWidth: 80,
     itemProps:{
       labelAlign:'left'
     },
@@ -142,7 +137,6 @@ export const searchGroupFormSchema: FormSchema[] = [
     field: 'groupCode',
     label: t('views.groupInfo.groupCode'),
     component: 'Input',
-    labelWidth: 80,
     colProps: {span: 8},
   },
 ];
@@ -190,17 +184,15 @@ export const searchCordFormSchema: FormSchema[] = [
     field: 'cordCode',
     label: t('views.role.cordCode'),
     component: 'Input',
-    labelWidth: 80,
     itemProps:{
       labelAlign:'left'
     },
-    colProps: {span: 9},
+    colProps: {span: 8},
   },
   {
     field: 'cordName',
     label: t('views.role.cordName'),
     component: 'Input',
-    labelWidth: 80,
-    colProps: {span: 9},
+    colProps: {span: 8},
   },
 ];

@@ -29,7 +29,7 @@ export const basicProps = {
   },
   showTableSetting: Boolean,
   autoCreateKey: { type: Boolean, default: true },
-  striped: { type: Boolean, default: true },
+  striped: { type: Boolean, default: false },
   showSummary: Boolean,
   summaryFunc: {
     type: [Function, Array] as PropType<(...arg: any[]) => any[]>,

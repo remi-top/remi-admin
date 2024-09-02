@@ -514,7 +514,7 @@
       &__name {
         margin-top: 2px;
         margin-bottom: 0;
-        font-size: 12px;
+        font-size: 14px;
         transition: all 0.2s;
         word-break: break-all;
       }

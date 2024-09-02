@@ -140,7 +140,6 @@ export const searchFormSchema: FormSchema[] = [
     field: 'loginName',
     label: t('views.personal.loginName'),
     component: 'Input',
-    labelWidth:60,
     itemProps:{
       labelAlign:'left'
     },
@@ -148,7 +147,6 @@ export const searchFormSchema: FormSchema[] = [
   },
   {
     field: 'userName',
-    labelWidth:80,
     label: t('views.personal.userName'),
     component: 'Input',
     colProps: {span:9},

@@ -33,7 +33,7 @@ export default defineComponent({
         api: getConfigRecordPage,
         columns:columns,
         formConfig: {
-          labelWidth: 100,
+          labelWidth: 90,
           schemas: searchFormSchema,
           showAdvancedButton: true,
           showResetButton: true,

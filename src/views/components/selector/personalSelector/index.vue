@@ -104,6 +104,7 @@
         //   status:1
         // },
         formConfig: {
+          labelWidth:90,
           schemas: searchFormSchema,
           showResetButton: false,
           showAdvancedButton: true,

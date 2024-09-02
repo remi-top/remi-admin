@@ -85,7 +85,7 @@
         columns,
         immediate:false,
         formConfig: {
-          // labelWidth: 100,
+          labelWidth: 80,
           schemas: searchFormSchema,
           showAdvancedButton: true,
           showResetButton: true,

@@ -6,7 +6,7 @@
           :edit="false"
           :uploadApi="uploadApi"
           :showBtn="false"
-          :value="avatar"
+          :value="userInfo.headPicPreviewUrl"
           :btnProps="{ preIcon: 'ant-design:cloud-upload-outlined' }"
           @change="updateAvatar"
           width="80"
@@ -112,11 +112,7 @@ const accountNameEdit = ref();
 const [registerModal, { openModal }] = useModal();
 //头像动态计算
 const avatar = computed(async () => {
-  const headPic = userInfo.value.headPic
-  return await GetPreview({
-    fileName: headPic
-  })
-  return getFileAccessHttpUrl(userInfo.value.headPic) || headerImg;
+  return userInfo.value?.headPicPreviewUrl
 });
 const list = [
   'loginName',
@@ -148,10 +144,9 @@ personalFormSchema.map(item => {
 /**
  * 更新用户头像
  */
-function updateAvatar(src: string, data: string) {
+function updateAvatar({ src, data }) {
   console.log('src',src)
   console.log('data',data)
-  return
   const userinfo = userStore.getUserInfo;
   userinfo.headPic = data;
   userStore.setUserInfo(userinfo);
@@ -239,6 +234,12 @@ function getUserDetail() {
         res.sexText = getSex(res.sex);
         res.birthday = getBirthDay(res.birthday);
         res.createTimeText = getDiffDay(res.createdAt);
+        let headPicPreviewUrl = await GetPreview({
+          fileName: res.headPic
+        })
+        console.log('headPicPreviewUrl',headPicPreviewUrl);
+        
+        res.headPicPreviewUrl = headPicPreviewUrl
         userInfo.value = res;
       } else {
         userInfo.value = {};

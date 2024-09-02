@@ -33,7 +33,6 @@
         // if (unref(isUpdate)) {
           setFieldsValue({
             ...formData,
-            status: formData.status === 1,
           });
         // }
       });
@@ -48,7 +47,6 @@
           const values = await validate();
           console.log('values', values);
           values.parentId = values.parentId ? values.parentId : 0
-          values.status = values.status ? 1 : 0;
           const api = !unref(isUpdate) ? saveInfo : updateInfo
           await api(values);
           closeDrawer();
