@@ -33,8 +33,9 @@ pnpm run dev
 ```
 
 ## 体验地址
+(欢迎体验并留下您宝贵的建议)
 
-https://remi.run
+[remi.run](https://remi.run)
 
 RemiAdmin/123456
 
