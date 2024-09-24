@@ -16,7 +16,7 @@
     components: {
       BackTop,
       LayoutLockPage: createAsyncComponent(() => import('/@/views/sys/lock/index.vue')),
-      SettingDrawer: createAsyncComponent(() => import('/@/layouts/default/setting/index.vue')),
+      // SettingDrawer: createAsyncComponent(() => import('/@/layouts/default/setting/index.vue')),
       SessionTimeoutLogin,
     },
     setup() {
@@ -54,7 +54,7 @@
 <template>
   <LayoutLockPage />
   <BackTop v-if="getUseOpenBackTop" :target="getTarget" />
-  <SettingDrawer v-if="getIsFixedSettingDrawer" :class="prefixCls" />
+  <!-- <SettingDrawer v-if="getIsFixedSettingDrawer" :class="prefixCls" /> -->
   <SessionTimeoutLogin v-if="getIsSessionTimeout" />
 </template>
 

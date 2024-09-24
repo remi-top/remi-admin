@@ -61,7 +61,7 @@
           <span class="hidden md:block"  style="line-height:1.1">{{ t('layout.header.dropdownItemLoginOut') }}</span>
         </div>
       </div> -->
-      <SettingDrawer v-if="getShowSetting" :class="`${prefixCls}-action__item`" />
+      <!-- <SettingDrawer v-if="getShowSetting" :class="`${prefixCls}-action__item`" /> -->
     </div>
   </Header>
 </template>
@@ -113,9 +113,6 @@
       Notify,
       AppSearch,
       ErrorAction,
-      SettingDrawer: createAsyncComponent(() => import('/@/layouts/default/setting/index.vue'), {
-        loading: true,
-      }),
     },
     props: {
       fixed: propTypes.bool,

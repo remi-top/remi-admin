@@ -13,7 +13,6 @@ tests/server/static/upload
 .env.local
 .env.*.local
 .eslintcache
-.env.development
 # Log files
 npm-debug.log*
 yarn-debug.log*
